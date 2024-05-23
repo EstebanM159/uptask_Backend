@@ -31,12 +31,12 @@ export class AuthEmail {
         const info = await transporter.sendMail({
             from: 'UpTask <admin@uptask.com>',
             to: user.email,
-            subject: 'UpTask - Reestablece tu password',
-            text: 'UpTask - Reestablece tu password',
-            html:  `<p>Hola ${user.name}, has solicitado reestablecer tu password</p>
-                    <p>Visita el siente enlace: </p> <a href="${process.env.FRONTEND_URL}/auth/new-password/${user.tokenId}">Reestablecer password</a>
+            subject: 'UpTask - Restablece tu contraseña',
+            text: 'UpTask - Restablece tu contraseña',
+            html:  `<p>Hola ${user.name}, has solicitado reestablecer tu contraseña</p>
+                    <p>Visita el siente enlace: </p> <a href="${process.env.FRONTEND_URL}/auth/new-password/${user.tokenId}">Restablecer contraseña</a>
                     <p>E ingresa el siguiente codigo: <b>${user.token}</b></p>
-                    <p>Este token expira en 10 m</p>
+                    <p>Este token expira en 10 minutos</p>
                 `
         })
 

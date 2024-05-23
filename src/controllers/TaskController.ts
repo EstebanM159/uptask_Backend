@@ -61,7 +61,7 @@ export class TaskController {
             }
             req.task.completedBy.push(data)
             await req.task.save()
-            res.send('Tara actualizada')
+            res.send('Tarea actualizada')
         } catch (error) {
             return res.status(500).json({error: 'Hubo un error'})
         }
