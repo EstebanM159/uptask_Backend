@@ -93,7 +93,11 @@ export class AuthController {
             // Esto se consume en el frontend
             res.send(token)
         } catch (error) {
-            res.status(500).json({error:'Hubo un error'})
+             console.error('Error en AuthController.login:', error)
+
+    return res.status(500).json({
+        error: 'Hubo un error'
+    })
         }
     }
     static requestConfirmationCode = async (req:Request,res:Response) => {
